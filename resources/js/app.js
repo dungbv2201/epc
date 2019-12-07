@@ -1,14 +1,11 @@
 import Vue from 'vue'
 
-import vuetify from './plugins/vuetify'
 import router from "./router";
-import App from "./App";
+import App from "./AppComponent";
 import '../sass/app.scss'
-window.require = 'bootstrap'
+window.require = './bootstrap'
 
 const app = new Vue({
-    vuetify,
     router,
-    render: h => h(App),
-    el: '#app'
-})
+    render: h => h(App)
+}).$mount('#app')
